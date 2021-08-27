@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import BgColor from './BgColor';
 
 function randomColor() {
 	let randomColor = Math.floor(Math.random() * 16777215)
@@ -17,9 +18,7 @@ function App() {
 	return (
 		<div className="container" style={myStyle}>
 			<div className="main">
-				<div className="bg-color">
-					<h1>Background Color: {`# ${color}`}</h1>
-				</div>
+				<BgColor color={color} />
 				<div
 					className="btn"
 					onClick={() => {
